@@ -1,5 +1,6 @@
 #Import python library
 from pizzapi import *
+import json
 
 #Assign a customer
 customer = Customer('Donald', 'Trump', 'donald@whitehouse.gov', '2024561111')
@@ -9,4 +10,4 @@ address = Address('700 Pennsylvania Avenue NW', 'Washington', 'DC', '20408')
 
 store = address.closest_store()
 
-print(store.get_details())
+print(store.get_details()['StreetName'] + " " + store.get_details()['Region'])
